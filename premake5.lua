@@ -12,6 +12,7 @@ project "GLFW"
     "src/glfw_config.h",
     "src/context.c",
     "src/init.c",
+    "src/input.c",
     "src/monitor.c",
     "src/vulkan.c",
     "src/window.c"
@@ -38,6 +39,7 @@ project "GLFW"
    defines {
    "_GLFW_WIN32",
    "_CRT_SECURE_NO_WARNINGS"
+  }
    
    filter { "system:windows", "configurations:Release" }
     buildoptions "/MT"

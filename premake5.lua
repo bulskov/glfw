@@ -4,7 +4,7 @@ project "GLFW"
   
   targetdir ("bin/" .. outputdir .. "/%{prj.name}")
   objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
-  
+
   files 
   {
     "include/GLFW/glfw3.h",
@@ -12,6 +12,7 @@ project "GLFW"
     "src/glfw_config.h",
     "src/context.c",
     "src/init.c",
+    "src/input.c",
     "src/monitor.c",
     "src/vulkan.c",
     "src/window.c"
@@ -36,8 +37,9 @@ project "GLFW"
    }
    
    defines {
-   "_GLFW_WIN32",
-   "_CRT_SECURE_NO_WARNINGS"
+    "_GLFW_WIN32",
+    "_CRT_SECURE_NO_WARNINGS"
+   }
    
    filter { "system:windows", "configurations:Release" }
     buildoptions "/MT"

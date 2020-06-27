@@ -104,3 +104,7 @@ tests/windows
 
 bin
 bin-int
+
+*.user
+*.vcxproj
+*.vcxproj.filters
